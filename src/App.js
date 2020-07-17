@@ -1,19 +1,19 @@
 import React from 'react';
 import logo from './synchit-logo.png';
-import './App.css';
+import Calendar from 'react-calendar';
+import styles from './Calendar.scss';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Synch Yo'Self
-        </p>
-        <p className="Slogan">
-          Coming Soon...
-        </p>
-      </header>
+    <div>
+      <h1>
+        SynchIT
+      </h1>
+      <p className={styles.calendar}>
+      <Calendar />
+      <logo />
+      </p>
     </div>
   );
 }
