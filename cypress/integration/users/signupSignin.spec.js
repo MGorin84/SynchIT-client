@@ -1,12 +1,14 @@
-describe('Test Signin', () => {
+describe('Test Signin and Signup', () => {
 	it('should go to /signin', () => {
-		cy.visit('localhost:3000')
-		cy.get('Button').contains('Sign In').click()
+		cy.viewport(1024, 768)
+		cy.visit('/')
+		cy.get('[data-cy=signin]').click()
 		cy.url().should('contains', '/signin')
 	}),
 	it('should go to /signup', () => {
-		cy.visit('localhost:3000')
-		cy.get('Button').contains('Sign Up').click()
+		cy.viewport(1024, 768)
+		cy.visit('/')
+		cy.get('[data-cy=signout').click()
 		cy.url().should('contains', '/signup')
 	})
 })
