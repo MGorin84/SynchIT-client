@@ -52,10 +52,10 @@ export default function ButtonAppBar() {
           </NavLink>
           <Typography variant="h6" className={classes.title}>
           </Typography>
-          <Button variant="outlined" className={classes.menuButton} color="primary" onClick={navigate('/signin')}>
+          <Button data-cy="signin" variant="outlined" className={classes.menuButton} color="primary" onClick={navigate('/signin')}>
             Sign In
           </Button>
-          <Button variant="contained" className={classes.whiteTextButton} color="primary" onClick={navigate('signup')}>
+          <Button data-cy="signout" variant="contained" className={classes.whiteTextButton} color="primary" onClick={navigate('signup')}>
             Sign Up
           </Button>
         </Toolbar>
