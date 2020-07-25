@@ -3,12 +3,12 @@ describe('Test Signin and Signup', () => {
 		cy.viewport(1024, 768)
 		cy.visit('/')
 		cy.get('[data-cy=signin]').click()
-		cy.url().should('contains', '/signin')
+		cy.url().should('contains', '/sign-in')
 	}),
 	it('should go to /signup', () => {
 		cy.viewport(1024, 768)
 		cy.visit('/')
-		cy.get('[data-cy=signout').click()
-		cy.url().should('contains', '/signup')
+		cy.get('[data-cy=signup').click()
+		cy.url().should('contains', '/sign-up')
 	})
 })

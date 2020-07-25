@@ -1,15 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 
 import "react-calendar/dist/Calendar.css";
 import "./YourAvailability.css";
 
+import availability from "../data/availability";
+
 const YourAvailability = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const onDateChange = date => {
+    console.log("onDateChange", date);
     setSelectedDate(date);
   };
+
+  const getTileContent = (date, view) => {
+    
+    if(checkDateAvailable(date.date)){
+    return (
+      <p>*</p>
+    )};
+  };
+
+  const checkDateAvailable = (date) => {
+    for(let availString of availability){
+      const availDate = new Date(availString)
+      if(availDate.getDate() === date.getDate()
+      && availDate.getMonth() === date.getMonth()
+      && availDate.getFullYear() === date.getFullYear())
+        return true
+    }
+    return false
+  }
+
   return (
     <div className='YourAvail'>
       <div className='container'>
@@ -20,9 +43,10 @@ const YourAvailability = () => {
         <div className='calender-container'>
           <Calendar
             className='calender'
-            onChange={onDateChange}
+            onClickDay={onDateChange}
             value={selectedDate}
             tileClassName='calender-tile'
+            tileContent={getTileContent}
           />
         </div>
       </div>

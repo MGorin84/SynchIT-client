@@ -15,12 +15,12 @@ const Navbar = () => {
         </div>
         <ul className='nav-links'>
           <li className='nav-item'>
-            <Link to='sign-in' className='signin btn'>
+            <Link to='sign-in' data-cy='signin' className='signin btn'>
               Sign In
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='sign-up' className='signup btn'>
+            <Link to='sign-up' data-cy='signup' className='signup btn'>
               Sign Up
             </Link>
           </li>
