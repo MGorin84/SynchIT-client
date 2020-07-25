@@ -1,0 +1,69 @@
+.ConfirmCancellation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ConfirmCancellation h2 {
+  margin-top: 50px;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.ConfirmCancellation-msg {
+  max-width: 500px;
+  border: 1px solid gray;
+  width: 100%;
+  margin-top: 40px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ConfirmCancellation-msg h3 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.ConfirmCancellation-msg h4 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #c4c4c4;
+  margin-bottom: 20px;
+}
+
+.ConfirmCancellation-msg .rejoin-btn {
+  padding: 11px 39px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #18a0fb;
+  background-color: #18a0fb;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1440px) {
+  .ConfirmCancellation h2 {
+    margin-top: 20px;
+    font-size: 32px;
+  }
+
+  .ConfirmCancellation-msg {
+    max-width: 400px;
+    padding: 40px 0;
+  }
+
+  .ConfirmCancellation-msg h3 {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .ConfirmCancellation-msg h4 {
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
+}

@@ -1,65 +1,33 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
-import { useHistory, NavLink } from "react-router-dom";
-import { Typography, Avatar } from '@material-ui/core';
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/synchit-logo.png";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    fontStyle: 'normal',
-    fontWeight: 500,
-    fontSize: 15,
-    width: 130,
-    height: 40,
-  },
-  title: {
-    flexGrow: 1,
-  },
-  whiteTextButton: {
-    fontStyle: 'normal',
-    fontWeight: 500,
-    fontSize: 15,
-    color: '#fff',
-    width: 130,
-    height: 40,
-  },
-  large: {
-    width: theme.spacing(7),
-    height: theme.spacing(7),
-  },
-}));
+import "./Navbar.css";
 
-export default function ButtonAppBar() {
-  const classes = useStyles();
-  const history = useHistory();
-
-  const navigate = (route) => () => {
-    history.push(route);
-  }
-
+const Navbar = () => {
   return (
-    <div className={classes.root}>
-      <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
-        <Toolbar>
-          <NavLink to="/">
-            <Avatar alt="logo" src="./synchit-logo.png" className={classes.large} />
-          </NavLink>
-          <Typography variant="h6" className={classes.title}>
-          </Typography>
-          <Button variant="outlined" className={classes.menuButton} color="primary" onClick={navigate('/signin')}>
-            Sign In
-          </Button>
-          <Button variant="contained" className={classes.whiteTextButton} color="primary" onClick={navigate('signup')}>
-            Sign Up
-          </Button>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <nav>
+      <div className='container'>
+        <div className='logo'>
+          <Link to='/'>
+            <img src={logo} alt='synchit-logo' />
+          </Link>
+        </div>
+        <ul className='nav-links'>
+          <li className='nav-item'>
+            <Link to='sign-in' className='signin btn'>
+              Sign In
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='sign-up' className='signup btn'>
+              Sign Up
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
-}
+};
+
+export default Navbar;

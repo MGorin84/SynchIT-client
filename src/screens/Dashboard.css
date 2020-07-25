@@ -1,0 +1,96 @@
+.Dashboard {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Dashboard .heading {
+  font-size: 32px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.Dashboard .data {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.Dashboard .user-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Dashboard .user-info img {
+  width: 150px;
+  height: 150px;
+}
+
+.Dashboard .user-info a {
+  color: #9d00b7;
+  padding-top: 1.5rem;
+  font-size: 14px;
+  letter-spacing: -0.1;
+}
+
+.Dashboard .user-info .username {
+  font-size: 30px;
+  padding-top: 1rem;
+}
+
+.Dashboard .calender-data {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.Dashboard .calender {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.Dashboard .calender-data .calender-tile {
+  width: 40px;
+  height: 40px;
+}
+
+.calender-data .react-calendar__navigation__label__labelText {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media (max-width: 1440px) {
+  .Dashboard .heading {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+
+  .Dashboard .user-info img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .Dashboard .user-info {
+    margin-top: 20px;
+  }
+
+  .Dashboard .user-info a {
+    color: #9d00b7;
+    padding-top: 1rem;
+    font-size: 14px;
+    letter-spacing: -0.1;
+  }
+
+  .Dashboard .calender-data {
+    margin-top: 20px;
+  }
+
+  .Dashboard .calender-data {
+    padding: 0 4rem;
+  }
+  .Dashboard .calender-data .calender-tile {
+    width: 40px;
+    height: 40px;
+  }
+}
