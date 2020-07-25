@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useReducer, useEffect} from "react";
 import { Switch, Route } from "react-router-dom";
+import Reducer from "./config/stateReducer"
+import {StateContext} from "./config/store"
 import {
   Home,
   Signin,
@@ -14,8 +16,20 @@ import { Navbar, Footer } from "./components";
 import "./App.css";
 
 const App = () => {
+  const initialState = {
+    memberData: null
+  }
+  const [store, dispatch] = useReducer(Reducer, initialState)
+
+  useEffect(() => {
+    //check gor logged in user
+    //set member data if user logged in (fetch, dispatch)
+    //axios.get('/auth/user')
+  },[])
+
   return (
     <div className='App'>
+      <StateContext.Provider value={{store, dispatch}}> 
       <Navbar />
       <Switch>
         <Route exact path='/' component={Home} />
@@ -32,6 +46,7 @@ const App = () => {
         />
       </Switch>
       <Footer />
+      </StateContext.Provider>
     </div>
   );
 };

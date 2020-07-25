@@ -3,6 +3,8 @@ import React from "react";
 import "./Signin.css";
 
 const Signin = () => {
+  //handle login click handler
+  //send user data if user
   return (
     <div className='Signin'>
       <h2>Sign In</h2>
