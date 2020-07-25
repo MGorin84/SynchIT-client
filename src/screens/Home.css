@@ -1,0 +1,54 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Home .main-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+}
+
+.main-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.Home .info {
+  margin-top: 30px;
+}
+
+.signup-btn {
+  padding: 15px 62.5px;
+  border: 1px solid #18a0fb;
+  background-color: #18a0fb;
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.Home h1 {
+  font-weight: 400;
+  margin-top: 30px;
+  font-size: 46px;
+}
+
+@media screen and (max-width: 1376px) {
+  .Home .main-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8vh;
+  }
+
+  .Home h1 {
+    font-weight: 400;
+    margin-top: 30px;
+    font-size: 40px;
+  }
+}
