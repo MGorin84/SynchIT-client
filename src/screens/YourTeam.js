@@ -40,7 +40,7 @@ const Dashboard = () => {
             <p className='showall-text'>Show all availability</p>
           </div>
           <div className='calender-data'>
-            <h2>Your availability</h2>
+            <h2>Team availability</h2>
             <Calendar
               className='calender'
               onChange={onDateChange}

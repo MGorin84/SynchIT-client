@@ -1,10 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![SynchIT Logo](images/synchit-logo.png "SynchIT Logo")
 
-## Available Scripts
+**SynchIT** is a scheduling helper web app built by Maria Gorin (MGorin84) and Carly Davis (Carvis7) that’s primary purpose is to make it easier for people to connect.
 
-In the project directory, you can run:
+The purpose of SynchIT is to help teams of people synchronise their lifestyles, and make it easier to schedule meetings, catch up for brunch, and much more.
 
-### `yarn start`
+
+### How to install and run SynchIT locally
+
+In the project directory, run:
+
+##### `npm i`
+
+This will install all required dependencies.
+
+##### `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,57 +21,75 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+### Functionality / features
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+SynchIT works by having the user register as a team along with others, and then entering their availability into a calendar. It then takes all the user input and compares it against the rest of the data collected from the team, and displays it for everyone to see using a colour coded system - Green meaning ‘most’, if not ‘all’ users in a cohort are available, Yellow meaning some people are available, and Red meaning not many, and maybe even no one is available.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Target audience
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Whether it’s a group of friends or a team of work colleagues in a major company, SynchIT helps everyone see their acquaintances availability and schedules to help make catching up or setting meetings a breeze.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+It's made for people who wish to make it easier to stay connected in an environment where the current climate is making it hard for people to do that.
 
-### `yarn eject`
+### Tech stack
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- MERN stack
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+SynchIT is being developed using MERN stack ,a JavaScript framework which includes 4 technologies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+_Mongo DB_ is used for organizing data
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+_Node.js_ and Express.js are used to create a server side of the app
 
-## Learn More
+_React.js_ is used to build client side of the app
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- CSS is used for styling 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Netlify is a deployment platform we chose for the client side of the app
 
-### Code Splitting
+- Heroku was used to deploy server
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+![MERN Stack](images/mern-stack.jpeg "MERN")
 
-### Analyzing the Bundle Size
+## Dataflow Diagram
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![SynchIT DFD](images/dataflow-diagram.png)
 
-### Making a Progressive Web App
+## Application Architecture Diagram
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+![Application Architecture Diagram](images/architecture-diagram.png)
 
-### Advanced Configuration
+## User stories
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+[User stories board](https://app.cardboardit.com/maps/135109#)
 
-### Deployment
+![User stories](images/user-stories.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Wireframes for multiple standard screen sizes, created using industry standard software
 
-### `yarn build` fails to minify
+![SynchIt Sitemap](images/SynchIT-Sitemap.jpeg "SynchIt Sitemap")
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+#### Wireframes:
+
+https://www.figma.com/file/7zC7RSMN6l2X8MeCQK5gyr/SynchIT?node-id=0%3A1
+
+
+## Project management model and source control
+
+### Source control
+
+We use Gitflow for source control of the application and store our work in GitHub repositories.
+
+We created separate repositories for the server app and a client app.
+
+Master branches contain stable versions of the code which get deployed.
+
+Feature branches contain work in progress on which a pull request is made. It is then reviewed by another team member before being merged to the master branch once tested and confirmed to be working.
+
+![Gitflow diagram](images/git-workflow.png)
+
+## Screenshots of your Trello board demonstrating use throughout the initial stages of the project
+
+See **'images'** folder for all Trello board screenshots.
