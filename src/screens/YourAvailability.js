@@ -23,7 +23,7 @@ const YourAvailability = () => {
     if (!checkDateAvailable(date)) {
       dispatch ({
         type: "setAvailability",
-        data: [...availability, date.toLocaleDateString()]
+        data: [...availability, date.toLocaleDateString("en-US")]
       })
 
     } else {
@@ -58,7 +58,7 @@ const YourAvailability = () => {
   };
 
   const checkDateAvailable = (date) => {
-    console.log(date.toLocaleDateString);
+    console.log(date.toLocaleDateString("en-US"));
     console.log(availability)
     for(let availString of availability){
       const availDate = new Date(availString)
