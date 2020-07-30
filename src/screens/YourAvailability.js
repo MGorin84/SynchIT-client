@@ -18,7 +18,7 @@ const YourAvailability = () => {
     
     if(checkDateAvailable(date.date)){
     return (
-      <p>*</p>
+      <p className='AvailConfirm'></p>
     )};
   };
 
