@@ -21,7 +21,7 @@ const Signup = () => {
             <input className='last-name' type='text' placeholder='Last name' />
             <input className='email' type='email' placeholder='Email address' />
             <input type='Password' placeholder='Create password' />
-            <button>Sign Un</button>
+            <button>Sign Up</button>
           </form>
         </div>
       </div>

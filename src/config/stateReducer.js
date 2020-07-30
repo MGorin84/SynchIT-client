@@ -6,6 +6,12 @@ export default function (state, action) {
                 memberData: action.data
             }
         }
+        case "setAvailability": {
+            return {
+                ...state,
+                memberData: {...state.memberData, availability:action.data}
+            }
+        }
         default: 
             return state
     }
