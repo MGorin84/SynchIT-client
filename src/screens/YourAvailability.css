@@ -29,6 +29,10 @@
   font-weight: 500;
 }
 
+.CircleWrapper {
+  text-align: center;
+}
+
 .AvailConfirm {
   background-color: #a8ea89;
   height: 20px;
