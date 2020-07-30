@@ -19,9 +19,16 @@ const YourAvailability = () => {
     if(checkDateAvailable(date.date)){
     return (
       <div className='CircleWrapper'>
-              <p className='AvailConfirm'></p>
+        <p className='AvailConfirm'></p>
       </div>
-    )};
+    )} else {
+      return (
+      <div className='CircleWrapper'>
+        <p className='AvailNone'></p>
+      </div>
+
+      )
+    };
   };
 
   const checkDateAvailable = (date) => {
