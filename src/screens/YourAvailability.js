@@ -4,7 +4,8 @@ import {useGlobalState} from "../config/store";
 import "react-calendar/dist/Calendar.css";
 import "./YourAvailability.css";
 
-
+// Sets availability on the calendar by letting the user click on a day. 
+// This then pushes or pops a date into an array and colour 
 const YourAvailability = () => {
 
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -27,7 +28,16 @@ const YourAvailability = () => {
       })
 
     } else {
-
+      const updatedAvailability = availability.filter((availString)=> {
+        const availDate = new Date(availString)
+        return (availDate.getDate() !== date.getDate()
+      || availDate.getMonth() !== date.getMonth()
+      || availDate.getFullYear() !== date.getFullYear())
+      });
+      dispatch ({
+        type: "setAvailability",
+        data: updatedAvailability
+      });
     }
 
     setUpdateAvailability(!updateAvailability);
