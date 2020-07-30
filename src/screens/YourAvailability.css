@@ -29,6 +29,14 @@
   font-weight: 500;
 }
 
+.AvailConfirm {
+  background-color: #a8ea89;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 @media (max-width: 1376px) {
   .YourAvail .heading {
     font-size: 34px;
