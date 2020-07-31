@@ -14,6 +14,7 @@ import {
 } from "./screens";
 import { Navbar, Footer } from "./components";
 import "./App.css";
+import availability from "./data/availability";
 
 const App = () => {
   const initialState = {
@@ -21,7 +22,13 @@ const App = () => {
   }
   const [store, dispatch] = useReducer(Reducer, initialState)
 
+
   useEffect(() => {
+    const memberData = {availability: availability}
+    dispatch({
+      type: "setMemberData",
+      data: memberData
+    })
     //check gor logged in user
     //set member data if user logged in (fetch, dispatch)
     //axios.get('/auth/user')

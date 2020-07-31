@@ -4,6 +4,9 @@
 
 The purpose of SynchIT is to help teams of people synchronise their lifestyles, and make it easier to schedule meetings, catch up for brunch, and much more.
 
+##### Netlify: https://admiring-dijkstra-36720e.netlify.app/
+
+##### Github Repo: https://github.com/MGorin84/SynchIT-client
 
 ### How to install and run SynchIT locally
 
