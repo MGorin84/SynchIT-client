@@ -18,6 +18,10 @@ export async function registerUser(userInfo) {
 
 export async function userAuthenticated() {
     const response = await api.get('auth/user');
-    console.log(response)
-    return response.data
+    if(response.status === 200) {
+        const userResponse = await api.get(`users/${response.data._id}`);
+        return userResponse.data
+    } 
+    // console.log(response)
+    return null
 }

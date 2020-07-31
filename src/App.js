@@ -27,6 +27,7 @@ const App = () => {
   useEffect(() => {
     //check for logged in user
   userAuthenticated().then((user)=>{
+    console.log(user)
     if(user) {
       dispatch({
         type: "setLoggedInUser",
@@ -36,7 +37,7 @@ const App = () => {
         type: "setMemberData",
         data: user
       })
-  
+  // console.log("useEffect", user.availability)
     }
   })
   .catch(()=>{})

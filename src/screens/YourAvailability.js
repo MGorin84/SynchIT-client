@@ -3,10 +3,11 @@ import Calendar from "react-calendar";
 import {useGlobalState} from "../config/store";
 import "react-calendar/dist/Calendar.css";
 import "./YourAvailability.css";
+import {updateUser} from "../services/userServices"
 
 // Sets availability on the calendar by letting the user click on a day. 
 // This then pushes or pops a date into an array and colour codes depending on availability
-const YourAvailability = () => {
+const YourAvailability = ({history}) => {
 
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [updateAvailability, setUpdateAvailability] = useState(false);
@@ -17,6 +18,7 @@ const YourAvailability = () => {
     return null
   }
   const {availability} = memberData
+  const originalAvailability = [...availability]
   if(!availability) {
     dispatch({
       type: "setAvailability",
@@ -56,6 +58,9 @@ const YourAvailability = () => {
 
   };
 
+
+
+
   const getTileContent = (date, view) => {
     
     if(checkDateAvailable(date.date)) {
@@ -74,11 +79,11 @@ const YourAvailability = () => {
   };
 
   const checkDateAvailable = (date) => {
-    console.log(date.toLocaleDateString("en-US"));
-    console.log(availability)
+    // console.log(date.toLocaleDateString("en-US"));
+    // console.log(availability)
     for(let availString of availability){
       const availDate = new Date(availString)
-      console.log(availDate.toLocaleDateString("en-US"))
+      // console.log(availDate.toLocaleDateString("en-US"))
       if(availDate.getDate() === date.getDate()
       && availDate.getMonth() === date.getMonth()
       && availDate.getFullYear() === date.getFullYear())
@@ -87,8 +92,25 @@ const YourAvailability = () => {
     return false
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(memberData)
+    updateUser(memberData).then((userData) => {
+      console.log(userData)
+      history.push("/dashboard")
+    })
+    .catch((error) => {
+      console.log(error.message)
+      dispatch ({
+        type: "setAvailability",
+        data: originalAvailability
+      })
+    })
+
+  }
+
   return (
-    <div className='YourAvail' updateAvailability={updateAvailability} >
+    <div className='YourAvail' >
       <div className='container'>
         <h2 className='heading'>Your availability</h2>
         <p className='sub-heading'>
@@ -103,7 +125,7 @@ const YourAvailability = () => {
             tileContent={getTileContent}
           />
         </div>
-        <button className="UpdateButton">Update</button>
+        <button className="UpdateButton" onClick={handleSubmit}>Update</button>
       </div>
     </div>
   );

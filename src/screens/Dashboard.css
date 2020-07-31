@@ -60,6 +60,28 @@
   font-weight: 500;
 }
 
+.CircleWrapperDash {
+  text-align: center;
+}
+
+
+.AvailConfirmDash {
+  background-color: #a8ea89;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.AvailNoneDash {
+  background-color: #ee5858;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
 @media (max-width: 1440px) {
   .Dashboard .heading {
     font-size: 32px;

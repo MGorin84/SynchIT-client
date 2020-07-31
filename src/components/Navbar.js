@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/synchit-logo.png";
 import {useGlobalState} from '../config/store';
+import {logoutUser} from '../services/authServices'
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -57,7 +58,7 @@ const Navbar = () => {
           </div>
           <ul className='nav-links'>
             <li className='nav-item'>
-              <Link to='sign-out' data-cy='signout' className='signin btn'>
+              <Link data-cy='signout' className='signin btn' onClick={handleLogout} to='/'>
                 Sign Out
               </Link>
             </li>
