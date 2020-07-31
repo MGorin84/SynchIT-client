@@ -12,6 +12,14 @@ const SignIn = ({history}) => {
   const [userDetails,setUserDetails] = useState(initialFormState)
   const {dispatch} = useGlobalState()
   
+  function handleChange(event) {
+    const name = event.target.name
+    const value = event.target.value
+    setUserDetails({
+    ...userDetails,
+    [name]: value
+    })
+    }
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -21,7 +29,7 @@ const SignIn = ({history}) => {
             type: "setLoggedInUser",
             data: userDetails.username
         })
-        history.push("/")
+        history.push("/dashboard")
         
     }).catch((error) => {
         console.log(`An error occurred authenticating: ${error}`)
@@ -38,9 +46,9 @@ const SignIn = ({history}) => {
         <div>
           <h3>Sign in</h3>
           <form>
-            <input type='email' placeholder='Email address' />
-            <input type='Password' placeholder='Password' />
-            <button>Sign In</button>
+            <input type='text' name='username' placeholder='Username' onChange={handleChange}/>
+            <input type='Password' name='password' placeholder='Password' onChange={handleChange}/>
+            <button onClick={handleSubmit}>Sign In</button>
           </form>
         </div>
       </div>
