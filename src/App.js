@@ -15,6 +15,7 @@ import {
 import { Navbar, Footer } from "./components";
 import "./App.css";
 import availability from "./data/availability";
+import {userAuthenticated} from "./services/authServices"
 
 const App = () => {
   const initialState = {
@@ -24,12 +25,21 @@ const App = () => {
 
 
   useEffect(() => {
-    const memberData = {availability: availability}
-    dispatch({
-      type: "setMemberData",
-      data: memberData
-    })
-    //check gor logged in user
+    //check for logged in user
+  userAuthenticated().then((user)=>{
+    if(user) {
+      dispatch({
+        type: "setLoggedInUser",
+        data: user.username
+      })
+      dispatch({
+        type: "setMemberData",
+        data: user
+      })
+  
+    }
+  })
+  .catch(()=>{})
     //set member data if user logged in (fetch, dispatch)
     //axios.get('/auth/user')
   },[])

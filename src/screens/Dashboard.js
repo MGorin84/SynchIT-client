@@ -4,9 +4,12 @@ import Calendar from "react-calendar";
 import picture from "../assets/blank-profile.png";
 import "react-calendar/dist/Calendar.css";
 import "./Dashboard.css";
+import {useGlobalState} from "../config/store"
 
 const Dashboard = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const {store} = useGlobalState();
+  const {loggedInUser} = store;
 
   const onDateChange = date => {
     setSelectedDate(date);
@@ -22,7 +25,7 @@ const Dashboard = () => {
             <Link to='/edit-picture' className='edit-picture'>
               Edit profile picture
             </Link>
-            <h2 className='username'>Username</h2>
+            <h2 className='username'>{loggedInUser}</h2>
             <Link to='/your-availability' className='edit-availability'>
               Edit your availability
             </Link>

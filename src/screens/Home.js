@@ -12,7 +12,7 @@ const Home = () => {
       </div>
 
       <div className='info'>
-        <Link to='sing-up' className='signup-btn'>
+        <Link to='sign-up' className='signup-btn'>
           Sign Up
         </Link>
         <h1>Synch yo'self</h1>

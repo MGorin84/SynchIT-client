@@ -17,6 +17,12 @@ const YourAvailability = () => {
     return null
   }
   const {availability} = memberData
+  if(!availability) {
+    dispatch({
+      type: "setAvailability",
+      data: []
+    })
+  }
   const onDateChange = date => {
     console.log("onDateChange", date);
     setSelectedDate(date);
@@ -72,6 +78,7 @@ const YourAvailability = () => {
     console.log(availability)
     for(let availString of availability){
       const availDate = new Date(availString)
+      console.log(availDate.toLocaleDateString("en-US"))
       if(availDate.getDate() === date.getDate()
       && availDate.getMonth() === date.getMonth()
       && availDate.getFullYear() === date.getFullYear())
