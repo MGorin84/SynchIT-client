@@ -1,8 +1,33 @@
-import React from "react";
-
+import React, {useState} from "react";
+import {useGlobalState} from '../config/store'
+import {loginUser} from '../services/authServices'
 import "./Signin.css";
 
-const Signin = () => {
+const SignIn = ({history}) => {
+  const initialFormState = {
+  username: "",
+  password: ""
+  }
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [userDetails,setUserDetails] = useState(initialFormState)
+  const {dispatch} = useGlobalState()
+  
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    // Attempt login on server
+    loginUser(userDetails).then(() => {
+        dispatch({
+            type: "setLoggedInUser",
+            data: userDetails.username
+        })
+        history.push("/")
+        
+    }).catch((error) => {
+        console.log(`An error occurred authenticating: ${error}`)
+    })		
+};
+
   //handle login click handler
   //send user data if user
   return (
@@ -23,4 +48,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default SignIn;

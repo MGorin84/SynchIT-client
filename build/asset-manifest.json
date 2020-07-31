@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.95a23e3e.chunk.css",
+    "main.js": "/static/js/main.780e1550.chunk.js",
+    "main.js.map": "/static/js/main.780e1550.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.becb26de.js",
+    "runtime-main.js.map": "/static/js/runtime-main.becb26de.js.map",
+    "static/css/2.8dbe6964.chunk.css": "/static/css/2.8dbe6964.chunk.css",
+    "static/js/2.dfeb37a2.chunk.js": "/static/js/2.dfeb37a2.chunk.js",
+    "static/js/2.dfeb37a2.chunk.js.map": "/static/js/2.dfeb37a2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.83a31368c8fb0cdce2edc63a1a608aa1.js": "/precache-manifest.83a31368c8fb0cdce2edc63a1a608aa1.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.8dbe6964.chunk.css.map": "/static/css/2.8dbe6964.chunk.css.map",
+    "static/css/main.95a23e3e.chunk.css.map": "/static/css/main.95a23e3e.chunk.css.map",
+    "static/js/2.dfeb37a2.chunk.js.LICENSE.txt": "/static/js/2.dfeb37a2.chunk.js.LICENSE.txt",
+    "static/media/synchit-logo.png": "/static/media/synchit-logo.519981b5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.becb26de.js",
+    "static/css/2.8dbe6964.chunk.css",
+    "static/js/2.dfeb37a2.chunk.js",
+    "static/css/main.95a23e3e.chunk.css",
+    "static/js/main.780e1550.chunk.js"
+  ]
+}
