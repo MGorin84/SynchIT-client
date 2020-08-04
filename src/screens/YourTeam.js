@@ -12,32 +12,37 @@ const Dashboard = () => {
     setSelectedDate(date);
   };
 
+  // pull availability of all users and save in array
+  // use that array to display availability
+
+  // mvp - make circle green if anyone is available / red if none available
+
   return (
     <div className='Your-Team'>
       <div className='container'>
         <h2 className='heading'>Your Team</h2>
         <div className='data'>
           <div className='team-info'>
-            <p>Click on profile to check your availability</p>
+            <p> </p>
             <div className='team'>
               <div className='team-member'>
                 <img src={picture} alt='profile' />
-                <p>Name</p>
+                {/* <p>Name</p> */}
               </div>
               <div className='team-member'>
                 <img src={picture} alt='profile' />
-                <p>Name</p>
+                {/* <p>Name</p> */}
               </div>
               <div className='team-member'>
                 <img src={picture} alt='profile' />
-                <p>Name</p>
+                {/* <p>Name</p> */}
               </div>
               <div className='team-member'>
                 <img src={picture} alt='profile' />
-                <p>Name</p>
+                {/* <p>Name</p> */}
               </div>
             </div>
-            <p className='showall-text'>Show all availability</p>
+            {/* <p className='showall-text'>Show all availability</p> */}
           </div>
           <div className='calender-data'>
             <h2>Team availability</h2>

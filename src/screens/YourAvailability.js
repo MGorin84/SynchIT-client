@@ -50,12 +50,6 @@ const YourAvailability = ({history}) => {
 
     setUpdateAvailability(!updateAvailability);
 
-    // need to push clicked dates to availability to change colours on calendar
-    // let datespush = [];
-    // datespush.push(date.toLocaleDateString());
-    // console.log(datespush)
-
-
   };
 
 
@@ -125,6 +119,7 @@ const YourAvailability = ({history}) => {
             tileContent={getTileContent}
           />
         </div>
+        <button className="UpdateButton" to="/dashboard">Cancel</button>
         <button className="UpdateButton" onClick={handleSubmit}>Update</button>
       </div>
     </div>
