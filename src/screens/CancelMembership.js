@@ -1,8 +1,18 @@
-import React from "react";
-
+import React, {useState} from "react";
+import {useGlobalState} from "../config/store";
 import "./CancelMembership.css";
 
 const CancelMembership = () => {
+
+  const {store} = useGlobalState();
+  const {loggedInUser, memberData} = store;
+
+  // delete user
+
+  // const deleteUser = 
+
+
+
   return (
     <div className='CancelMembership'>
       <h2>Cancel your membership</h2>
@@ -13,7 +23,7 @@ const CancelMembership = () => {
           <form>
             <input type='email' placeholder='Email address' />
             <input type='Password' placeholder='Password' />
-            <button>Cancel membership</button>
+            <button to='/confirm-cancellation'>Cancel membership</button>
           </form>
         </div>
       </div>

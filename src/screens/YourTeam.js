@@ -12,6 +12,11 @@ const Dashboard = () => {
     setSelectedDate(date);
   };
 
+  // pull availability of all users and save in array
+  // use that array to display availability
+
+  // mvp - make circle green if anyone is available / red if none available
+
   return (
     <div className='Your-Team'>
       <div className='container'>

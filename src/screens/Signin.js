@@ -24,11 +24,16 @@ const SignIn = ({history}) => {
   function handleSubmit(event) {
     event.preventDefault()
     // Attempt login on server
-    loginUser(userDetails).then(() => {
+    loginUser(userDetails).then((user) => {
         dispatch({
             type: "setLoggedInUser",
             data: userDetails.username
+        });
+        dispatch({
+          type: "setMemberData",
+          data: user
         })
+  console.log(user.availability);
         history.push("/dashboard")
         
     }).catch((error) => {
