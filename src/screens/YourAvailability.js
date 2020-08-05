@@ -86,6 +86,11 @@ const YourAvailability = ({history}) => {
     return false
   }
 
+  const handleCancel = (event) => {
+    event.preventDefault();
+    history.push("/dashboard")
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(memberData)
@@ -119,7 +124,7 @@ const YourAvailability = ({history}) => {
             tileContent={getTileContent}
           />
         </div>
-        <button className="UpdateButton" to="/dashboard">Cancel</button>
+        <button className="UpdateButton" onClick={handleCancel}>Cancel</button>
         <button className="UpdateButton" onClick={handleSubmit}>Update</button>
       </div>
     </div>
