@@ -112,7 +112,7 @@ const YourAvailability = ({history}) => {
     <div className='YourAvail' >
       <div className='container'>
         <h2 className='heading'>Your availability</h2>
-        <p className='sub-heading'>
+        <p className='sub-heading' >
           Click on a day to change your availability for the month, then click 'Update' to save{" "}
         </p>
         <div className='calender-container'>
