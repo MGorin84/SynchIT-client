@@ -1,11 +1,30 @@
 import React, {useState} from "react";
 import {useGlobalState} from "../config/store";
 import "./CancelMembership.css";
+import {deleteUser} from '../services/userServices'
 
-const CancelMembership = () => {
+const CancelMembership = ({history}) => {
 
   const {store} = useGlobalState();
   const {loggedInUser, memberData} = store;
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(memberData)
+    deleteUser(memberData).then((userData) => {
+      console.log(userData)
+      history.push("/confirm-cancellation")
+    })
+    .catch((error) => {
+      console.log(error.message)
+      // dispatch ({
+      //   type: "setAvailability",
+      //   data: originalAvailability
+      // })
+    })
+
+  }
+
 
   // delete user
 
@@ -23,7 +42,7 @@ const CancelMembership = () => {
           <form>
             <input type='email' placeholder='Email address' />
             <input type='Password' placeholder='Password' />
-            <button to='/confirm-cancellation'>Cancel membership</button>
+            <button to='/confirm-cancellation' onClick={handleSubmit}>Cancel membership</button>
           </form>
         </div>
       </div>
