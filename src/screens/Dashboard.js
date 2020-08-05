@@ -76,9 +76,9 @@ const Dashboard = () => {
               Cancel your membership
             </Link>
           </div>
-          <div className='calender-data'>
+          <div className='calender-data' data-cy='calender'>
             <h2>Your availability</h2>
-            <Calendar
+            <Calendar 
               className='calender'
               onChange={onDateChange}
               value={selectedDate}
