@@ -51,9 +51,9 @@ const SignIn = ({history}) => {
         <div>
           <h3>Sign in</h3>
           <form>
-            <input type='text' name='username' placeholder='Username' onChange={handleChange}/>
-            <input type='Password' name='password' placeholder='Password' onChange={handleChange}/>
-            <button onClick={handleSubmit}>Sign In</button>
+            <input type='text' name='username' data-cy='username' placeholder='Username' onChange={handleChange}/>
+            <input type='Password' name='password' data-cy='password' placeholder='Password' onChange={handleChange}/>
+            <button data-cy='signinButton' onClick={handleSubmit}>Sign In</button>
           </form>
         </div>
       </div>
