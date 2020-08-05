@@ -66,7 +66,8 @@ const Dashboard = () => {
               Edit profile picture
             </Link> */}
             <h2 className='username'>{loggedInUser}</h2>
-            <Link to='/your-availability' className='edit-availability'>
+            <Link to='/your-availability'
+            className='edit-availability'>
               Edit your availability
             </Link>
             <Link to='/your-team' className='team-availability'>

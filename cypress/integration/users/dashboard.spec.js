@@ -19,7 +19,15 @@ beforeEach(() => {
 
 describe('Test calender visible', () => {
 	it('calender is visible', () => {
-		cy.viewport(1024, 768)
         cy.get("[data-cy=calender]").should("be.visible")
-	})
+    }),
+    it('can access edit availability', () => {
+        cy.contains("Edit your availability").click()
+		cy.url().should('contains', '/your-availability')
+    }),
+
+    it('can access team availability', () => {
+        cy.contains("Show team availability").click()
+		cy.url().should('contains', '/your-team')
+    })
 })
