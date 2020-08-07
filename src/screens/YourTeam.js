@@ -29,14 +29,6 @@ const YourTeam = () => {
     return null
   }
 
-  // const getTeamAvailability = () => {
-  //   for(let user of users) {
-  //     allUserAvail.push(user.availability)
-  //   }
-  //   console.log(allUserAvail)
-
-  // }
-
   const displayTeam = () => {
     return (
     <div className='team-info'>
@@ -93,28 +85,29 @@ const YourTeam = () => {
     return false
   }
 
-  // pull availability of all users and save in array
-  // use that array to display availability
-
-  // mvp - make circle green if anyone is available / red if none available
-
   return (
     <div className='Your-Team'>
       <div className='container'>
         <h2 className='heading'>Your Team</h2>
         <div className='data'>
-            {/* <p className='showall-text'>Show all availability</p> */}
-            {displayTeam()}
+          <div className='team-info'>
+            <div className='team'>
+              <div className='team-member'>
+                {/* <p className='showall-text'>Show all availability</p> */}
+                {displayTeam()}
+              </div>
+            </div>
           </div>
-          <div className='calender-data'>
-            <h2>Team availability</h2>
-            <Calendar
-              className='calender'
-              onChange={onDateChange}
-              value={selectedDate}
-              tileClassName='calender-tile'
-              tileContent={getTileContent}
-            />
+                <div className='calender-data'>
+                  <h2>Team availability</h2>
+                  <Calendar
+                    className='calender'
+                    onChange={onDateChange}
+                    value={selectedDate}
+                    tileClassName='calender-tile'
+                    tileContent={getTileContent}
+                  />
+                </div>
           </div>
         </div>
       </div>
