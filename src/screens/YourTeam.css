@@ -30,10 +30,11 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-top: -40px;
 }
 
 .Your-Team .team-member {
-  width: 50%;
+  width: 500%;
   text-align: center;
   margin-top: 50px;
 }
